@@ -1,0 +1,20 @@
+{
+  "name": "Means_Database_Signup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbf8/Means_Database_Signup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbf8/Means_Database_Signup/issues"
+  },
+  "homepage": "https://github.com/dbf8/Means_Database_Signup#readme"
+}
