@@ -5,44 +5,48 @@ class Preferences extends Component {
   render() {
     return (
       <div className="table-container">
-        <h1>Consumables</h1>
+        <h1 className="preferences-header">Preferences</h1>
         <table>
           <tbody>
             <th>Food</th>
             <tr>
-              <td><label><input className="btn" type="checkbox" />Dairy</label></td>
-              <td><label><input className="btn" type="checkbox" />Protein</label></td>
-              <td><label><input className="btn" type="checkbox" />Bread</label></td>
-              <td><label><input className="btn" type="checkbox" />Pastry</label></td>
+              <td className="food-table"><label className="container">Dairy<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="food-table"><label className="container">Protein<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="food-table"><label className="container">Bread<input type="checkbox" /><span className="checkmark"></span></label></td>
             </tr>
             <tr>
-              <td><label><input className="btn" type="checkbox" />Fruits</label></td>
-              <td><label><input className="btn" type="checkbox" />Vegetables</label></td>
-              <td><label><input className="btn" type="checkbox" />Snacks</label></td>
-              <td><label><input className="btn" type="checkbox" />Baby Food</label></td>
+              <td className="food-table"><label className="container">Pastry<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="food-table"><label className="container">Fruits<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="food-table"><label className="container">Vegetables<input type="checkbox" /><span className="checkmark"></span></label></td>
+            </tr>
+            <tr>
+              <td className="food-table"><label className="container">Snacks<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="food-table"><label className="container">Baby Food<input type="checkbox" /><span className="checkmark"></span></label></td>
             </tr>
           </tbody>
         </table>
 
-        <table>
+        <table className="drinks">
           <tbody>
             <th>Drinks</th>
             <tr>
-              <td><label><input type="radio" />Water</label></td>
-              <td><label><input type="radio" />Other</label></td>
+              <td className="water"><label className="container">Water<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td><label className="container">Other<input type="checkbox" /><span className="checkmark"></span></label></td>
             </tr>
           </tbody>
         </table>
 
-        <table>
+        <table className="other">
           <tbody>
             <th>Other</th>
             <tr>
-              <td><label><input type="radio" />Low Sodium</label></td>
-              <td><label><input type="radio" />Gluten Free</label></td>
-              <td><label><input type="radio" />Baking Staples</label></td>
-              <td><label><input type="radio" />Pet Food</label></td>
-              <td><label><input type="radio" />Other</label></td>
+              <td className="other-table"><label className="container">Low Sodium<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="other-table"><label className="container">Gluten Free<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="other-table"><label className="container">Baking Staples<input type="checkbox" /><span className="checkmark"></span></label></td>
+            </tr>
+            <tr>
+              <td className="other-table"><label className="container">Pet Food<input type="checkbox" /><span className="checkmark"></span></label></td>
+              <td className="other-table"><label className="container">Other<input type="checkbox" /><span className="checkmark"></span></label></td>
             </tr>
           </tbody>
         </table>
