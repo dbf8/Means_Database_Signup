@@ -1,0 +1,36 @@
+.header {
+  height: 78px;
+  background: #184062;
+  position: sticky;
+}
+.logo {
+  float: left;
+  height: 65px;
+  padding: 8px;
+  padding-left: 20px;
+}
+.nav {
+  list-style-type: none;
+  float: right;
+  font-size: 18px;
+  padding: 28px;
+}
+.nav li {
+  display: inline;
+  padding-right: 15px;
+}
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed white;
+  border-right: 4px solid;
+  border-left: 4px solid;
+}
