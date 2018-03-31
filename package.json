@@ -1,20 +1,16 @@
 {
-  "name": "Means_Database_Signup",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "means_database_signup",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-scripts": "1.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dbf8/Means_Database_Signup.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dbf8/Means_Database_Signup/issues"
-  },
-  "homepage": "https://github.com/dbf8/Means_Database_Signup#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
