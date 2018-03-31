@@ -11,6 +11,7 @@ class OrgAddressForm extends Component {
         <label className="indent">Street: </label>
         <br />
         <input
+          onChange={this.props.handleOnChange}
           className="indent"
           type="text"
           name="street"
@@ -22,17 +23,35 @@ class OrgAddressForm extends Component {
 
         <label>Apt | Unit | Suite </label>
         <br />
-        <input type="text" name="suite" placeholder="Suite #" required />
+        <input
+          onChange={this.props.handleOnChange}
+          type="text"
+          name="suite"
+          placeholder="Suite #"
+          required
+        />
         <br />
         <br />
         <label>City</label>
         <br />
-        <input type="text" name="city" placeholder="City" required />
+        <input
+          onChange={this.props.handleOnChange}
+          type="text"
+          name="city"
+          placeholder="City"
+          required
+        />
         <br />
         <br />
         <span>
           <label>State</label>
-          <select require name="statesList">
+          <select
+            onChange={this.props.handleOnChange}
+            onFocus={e => (e.target.size = 5)}
+            onBlur={e => (e.target.size = 1)}
+            require
+            name="statesList"
+          >
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -87,6 +106,7 @@ class OrgAddressForm extends Component {
           </select>
           <label>Zip Code </label>
           <input
+            onChange={this.props.handleOnChange}
             className="zipwidth"
             type="number"
             name="zipcode"

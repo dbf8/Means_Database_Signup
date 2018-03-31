@@ -6,17 +6,20 @@ class OrgForm extends Component {
   constructor() {
     super();
     this.state = {
-      organization: {
-        name: "",
-        street: "",
-        suite: "",
-        city: "",
-        state: "",
-        zip: ""
-      }
+      name: "",
+      street: "",
+      suite: "",
+      city: "",
+      state: "",
+      zip: ""
     };
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
-
+  handleOnChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
   render() {
     return (
       <div>
@@ -26,8 +29,9 @@ class OrgForm extends Component {
           <label>Organization: </label>
           <br />
           <input
+            onChange={this.handleOnChange}
             type="text"
-            name="organization"
+            name="name"
             placeholder="Organization Name"
           />
           <br />
@@ -38,10 +42,13 @@ class OrgForm extends Component {
             city={this.state.city}
             state={this.state.state}
             zip={this.state.zip}
+            handleOnChange={this.handleOnChange}
           />
         </form>
         <br />
-        <button>Submit</button>
+        <button type="submit" value="submit">
+          Submit
+        </button>
       </div>
     );
   }
