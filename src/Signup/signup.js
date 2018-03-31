@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-
 import "../signup/Signup.css";
 
 class Signup extends Component {
@@ -13,7 +11,8 @@ class Signup extends Component {
         email: "",
         password: "",
         phonenumber: ""
-      }
+      },
+      isEnabled: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,6 +25,22 @@ class Signup extends Component {
         [e.target.name]: e.target.value
       }
     });
+    const user = this.state.user;
+    const isEnabled =
+      user.email.length > 0 &&
+      user.password.length > 0 &&
+      user.firstName.length > 0 &&
+      user.lastName.length > 0 &&
+      user.phonenumber.length > 0;
+
+    console.log("this is enabled: " + isEnabled);
+    if (isEnabled) {
+      this.setState({
+        ...this.state,
+        isEnabled: true
+      });
+    }
+    console.log(this.state.user);
   }
 
   handleSubmit(e) {
@@ -37,19 +52,23 @@ class Signup extends Component {
     return (
       <div className="signup">
         <h1>Sign Up Here!</h1>
-        <Link to="/donor" className="user">
-          <button>Donor</button>
-        </Link>
-        <Link to="/recipient" className="user">
-          <button>Recipient</button>
-        </Link>
+
         <form className="form" onSubmit={this.handleSubmit}>
+          <label>
+            <input type="radio" />
+            Donor
+          </label>
+          <label>
+            <input type="radio" />
+            Recipient
+          </label>
+          <br />
           <label>
             First Name:
             <input
-              type="firstname"
-              name="firstname"
-              value={this.state.value}
+              type="text"
+              name="firstName"
+              value={this.state.user.firstName}
               placeholder="First Name"
               onChange={this.handleChange}
             />
@@ -58,9 +77,9 @@ class Signup extends Component {
           <label>
             Last Name:
             <input
-              type="lastname"
-              name="lastname"
-              value={this.state.value}
+              type="text"
+              name="lastName"
+              value={this.state.user.lastName}
               placeholder="Last Name"
               onChange={this.handleChange}
             />
@@ -71,7 +90,7 @@ class Signup extends Component {
             <input
               type="email"
               name="email"
-              value={this.state.value}
+              value={this.state.user.email}
               placeholder="Email"
               onChange={this.handleChange}
             />
@@ -82,7 +101,7 @@ class Signup extends Component {
             <input
               type="password"
               name="password"
-              value={this.state.value}
+              value={this.state.user.password}
               placeholder="Password"
               onChange={this.handleChange}
             />
@@ -92,14 +111,19 @@ class Signup extends Component {
             Phone Number:
             <input
               type="number"
-              name="phone"
-              value={this.state.value}
+              name="phonenumber"
+              value={this.state.user.phonenumber}
               placeholder="Phone Number"
               onChange={this.handleChange}
             />
           </label>
           <br />
-          <input type="submit" value="submit" className="submit" />
+          <input
+            type="submit"
+            value="submit"
+            className="submit"
+            disabled={!this.state.isEnabled}
+          />
         </form>
       </div>
     );
