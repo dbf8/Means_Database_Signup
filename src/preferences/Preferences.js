@@ -50,6 +50,8 @@ class Preferences extends Component {
             </tr>
           </tbody>
         </table>
+
+        <p>Distance: <input type="number" /> miles</p>
       </div>
     );
   }
