@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import OrgAddressForm from "../orgaddressform/OrgAddressForm";
+import "./OrgForm.css";
 
 class OrgForm extends Component {
   render() {
@@ -8,14 +9,19 @@ class OrgForm extends Component {
         <h1>Organization Information</h1>
         <br />
         <form>
-          <span>
-            <label>Organization: </label>
-          </span>
-          <span>
-            <input type="text" name="organization" />
-          </span>
+          <label>Organization: </label>
+          <br />
+          <input
+            type="text"
+            name="organization"
+            placeholder="Organization Name"
+          />
+          <br />
+          <br />
           <OrgAddressForm />
         </form>
+        <br />
+        <button>Submit</button>
       </div>
     );
   }
