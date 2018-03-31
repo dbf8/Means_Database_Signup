@@ -3,6 +3,20 @@ import OrgAddressForm from "../orgaddressform/OrgAddressForm";
 import "./OrgForm.css";
 
 class OrgForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      organization: {
+        name: "",
+        street: "",
+        suite: "",
+        city: "",
+        state: "",
+        zip: ""
+      }
+    };
+  }
+
   render() {
     return (
       <div>
@@ -18,7 +32,13 @@ class OrgForm extends Component {
           />
           <br />
           <br />
-          <OrgAddressForm />
+          <OrgAddressForm
+            street={this.state.street}
+            suite={this.state.suite}
+            city={this.state.city}
+            state={this.state.state}
+            zip={this.state.zip}
+          />
         </form>
         <br />
         <button>Submit</button>
