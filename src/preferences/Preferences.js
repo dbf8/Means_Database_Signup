@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Preferences.css'
 
 class Preferences extends Component {
+
   render() {
     return (
       <div className="table-container">
@@ -51,7 +52,16 @@ class Preferences extends Component {
           </tbody>
         </table>
 
-        <p>Distance: <input type="number" /> miles</p>
+        <p className="distance">Show Me Food Within: <input className="mile-input" type="number" min="0" step="5" onkeydown="return false" /> miles</p>
+        <br />
+        <h2 className="h2">Minimum and Maximum Weights</h2>
+        <p className="distance small-text">Alert me about donations over <input className="mile-input" type="number" min="0" step="5" onkeydown="return false" /> pounds</p>
+        <p className="distance small-text">Do NOT alert me about donations over <input className="mile-input" type="number" min="0" step="5" onkeydown="return false" /> pounds</p>
+
+        <br />
+        <h2 className="h2">Special Instructions</h2>
+        <p className="distance small-text">What you type in this box will be shared with anyone that claims an item you post. You can use it to provide additional directions, or contact info.</p>
+        <textarea></textarea>
       </div>
     );
   }

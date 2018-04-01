@@ -1,12 +1,12 @@
 .preferences-header {
    font-family: 'Oswald', sans-serif;
-   font-size: 40px;
+   font-size: 35px;
 }
 label {
    font-size: 20px;
 }
 th {
-   font-size: 25px;
+   font-size: 20px;
    padding-bottom: 20px;
 }
 table {
@@ -32,7 +32,7 @@ tbody {
    position: relative;
    padding-left: 35px;
    margin-bottom: 12px;
-   font-size: 22px;
+   font-size: 18px;
    -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
@@ -89,4 +89,38 @@ tbody {
    -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
    transform: rotate(45deg);
+}
+
+.distance {
+   font-family: 'Oswald', sans-serif;
+   font-size: 18px;
+   text-align: left;
+   margin: 5px 25%;
+}
+.h2 {
+   margin: 20px 25%;
+   text-align: left;
+   font-size: 18px;
+}
+.mile-input {
+   font-family: 'Lato', 'sans-serif';
+   height: 25px;
+   width: 200px;
+   font-size: 18px;
+   border-radius: 10px;
+   border: 1px solid grey;
+   outline: none;
+   padding-left: 10px;
+}
+.small-text {
+   font-size: 15px;
+}
+textarea {
+   height: 200px;
+   width: 750px;
+   font-size: 15px;
+   padding: 10px;
+   border: 1px solid grey;
+   border-radius: 10px;
+   outline: none;
 }
