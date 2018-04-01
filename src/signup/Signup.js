@@ -128,12 +128,14 @@ class Signup extends Component {
             </div>
           </div>
           <br />
-          <input
-            type="submit"
-            value="submit"
-            className="submit"
-            disabled={!this.state.isEnabled}
-          />
+          <Link to="/organization-info">
+            <input
+              type="submit"
+              value="submit"
+              className="submit"
+              disabled={!this.state.isEnabled}
+            />
+          </Link>
         </form>
       </div>
     );

@@ -6,21 +6,27 @@ class OrgForm extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      street: "",
-      suite: "",
-      city: "",
-      state: "",
-      zip: ""
+      organizaton: {
+        name: "",
+        street: "",
+        suite: "",
+        city: "",
+        state: "",
+        zip: ""
+      }
     };
     this.handleOnChange = this.handleOnChange.bind(this);
   }
   handleOnChange(e) {
     this.setState({
-      [e.target.name]: e.target.value
+      organizaton: {
+        ...this.state.organizaton,
+        [e.target.name]: e.target.value
+      }
     });
   }
   render() {
+    console.log(this.state.organizaton.name);
     return (
       <div>
         <h1>Organization Information</h1>
@@ -40,11 +46,11 @@ class OrgForm extends Component {
           <label>EIN</label>
           <input type="number" name="ein" placeholder="EIN Number" /> */}
           <OrgAddressForm
-            street={this.state.street}
-            suite={this.state.suite}
-            city={this.state.city}
-            state={this.state.state}
-            zip={this.state.zip}
+            street={this.state.organizaton.street}
+            suite={this.state.organizaton.suite}
+            city={this.state.organizaton.city}
+            state={this.state.organizaton.state}
+            zip={this.state.organizaton.zip}
             handleOnChange={this.handleOnChange}
           />
         </form>
