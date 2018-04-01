@@ -62,6 +62,9 @@ class Preferences extends Component {
         <h2 className="h2">Special Instructions</h2>
         <p className="distance small-text">What you type in this box will be shared with anyone that claims an item you post. You can use it to provide additional directions, or contact info.</p>
         <textarea></textarea>
+        <button type="submit" value="submit">
+          Submit
+        </button>
       </div>
     );
   }

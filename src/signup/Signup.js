@@ -32,7 +32,7 @@ class Signup extends Component {
       user.password.length > 0 &&
       user.firstName.length > 0 &&
       user.lastName.length > 0 &&
-      user.phonenumber.length > 0;
+      user.phonenumber.length > 9;
 
     console.log("this is enabled: " + isEnabled);
     if (isEnabled) {
@@ -54,19 +54,20 @@ class Signup extends Component {
       <div className="signup">
         <h1 className="signupHeader">Sign Up Here!</h1>
         <form className="form" onSubmit={this.handleSubmit}>
-          <div className="formItem">
+          <div className="formItem-dr">
+            <input type="checkbox" />
             <label>Donor</label>
-            <input type="radio" />
+            <input type="checkbox" />
             <label>Recipient</label>
-            <input type="radio" />
           </div>
           <br />
           <div className="formItem">
             <label className="field">
-              <i className="material-icons">account_circle</i>Name:
+              <i className="material-icons">account_circle</i><span classNam="icon-label">Name</span>
             </label>
             <div>
               <input
+                className="mile-input signUp-input-firstname"
                 type="text"
                 name="firstName"
                 value={this.state.user.firstName}
@@ -74,6 +75,7 @@ class Signup extends Component {
                 onChange={this.handleChange}
               />
               <input
+                className="mile-input signUp-input-lastname"
                 type="text"
                 name="lastName"
                 value={this.state.user.lastName}
@@ -85,10 +87,11 @@ class Signup extends Component {
           <br />
           <div className="formItem">
             <label className="field">
-              <i className="material-icons">mail_outline</i>Email:
+              <i className="material-icons">mail_outline</i><span classNam="icon-label">Email</span>
             </label>
             <div>
               <input
+                className="mile-input signUp-input"
                 type="email"
                 name="email"
                 value={this.state.user.email}
@@ -100,10 +103,11 @@ class Signup extends Component {
           <br />
           <div className="formItem">
             <label className="field">
-              <i className="material-icons">vpn_key</i>Password:
+              <i className="material-icons">vpn_key</i><span classNam="icon-label">Password</span>
             </label>
             <div>
               <input
+                className="mile-input signUp-input"
                 type="password"
                 name="password"
                 value={this.state.user.password}
@@ -115,11 +119,12 @@ class Signup extends Component {
           <br />
           <div className="formItem">
             <label className="field">
-              <i className="material-icons">phone</i>Phone Number:
+              <i className="material-icons">phone</i><span classNam="icon-label">Phone Number</span>
             </label>
             <div>
               <input
-                type="number"
+                className="mile-input signUp-input"
+                type="text"
                 name="phonenumber"
                 value={this.state.user.phonenumber}
                 placeholder="Phone Number"
@@ -131,9 +136,9 @@ class Signup extends Component {
           <Link to="/organization-info">
             <input
               type="submit"
-              value="submit"
+              value="Sign Up"
               className="submit"
-              disabled={!this.state.isEnabled}
+            // disabled={!this.state.isEnabled}
             />
           </Link>
         </form>

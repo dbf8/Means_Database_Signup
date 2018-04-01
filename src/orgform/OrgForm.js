@@ -29,13 +29,14 @@ class OrgForm extends Component {
   render() {
     console.log(this.state.organizaton.name);
     return (
-      <div>
-        <h1>Organization Information</h1>
+      <div className="form">
+        <h1 className="signupHeader">Organization Information</h1>
         <br />
         <form>
-          <label>Organization: </label>
+          <label>Organization</label>
           <br />
           <input
+            className="mile-input org-input"
             onChange={this.handleOnChange}
             type="text"
             name="name"

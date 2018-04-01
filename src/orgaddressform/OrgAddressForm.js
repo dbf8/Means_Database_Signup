@@ -5,12 +5,13 @@ class OrgAddressForm extends Component {
   render() {
     return (
       <div>
-        <label>Organization Address: </label>
+        <label>Organization Address </label>
         <br />
         <br />
-        <label>Street: </label>
+        <label>Street </label>
         <br />
         <input
+          className="mile-input org-input"
           onChange={this.props.handleOnChange}
           type="text"
           name="street"
@@ -23,6 +24,7 @@ class OrgAddressForm extends Component {
         <label>Apt | Unit | Suite </label>
         <br />
         <input
+          className="mile-input org-input"
           onChange={this.props.handleOnChange}
           type="text"
           name="suite"
@@ -34,6 +36,7 @@ class OrgAddressForm extends Component {
         <label>City</label>
         <br />
         <input
+          className="mile-input org-input"
           onChange={this.props.handleOnChange}
           type="text"
           name="city"
@@ -105,6 +108,7 @@ class OrgAddressForm extends Component {
           </select>
           <label>Zip Code </label>
           <input
+            className="mile-input"
             onChange={this.props.handleOnChange}
             type="number"
             name="zipcode"

@@ -1,0 +1,13 @@
+input.mile-input.org-input {
+   width: 500px;
+ }
+ button {
+   margin-top: 20px;
+   border: none;
+   border-radius: 5px;
+   width: 200px;
+   color: white;
+   background: rgb(29, 179, 104);
+   font-size: 20px;
+   padding: 8px;
+ }
