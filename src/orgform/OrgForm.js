@@ -29,7 +29,7 @@ class OrgForm extends Component {
     console.log(this.state.organizaton.name);
     return (
       <div>
-        <h1>Organization Information</h1>
+        <h1 className="signupHeader">Organization Information</h1>
         <br />
         <form>
           <label>Organization: </label>
