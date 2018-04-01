@@ -119,12 +119,14 @@ class Signup extends Component {
             />
           </label>
           <br />
-          <input
-            type="submit"
-            value="submit"
-            className="submit"
-            disabled={!this.state.isEnabled}
-          />
+          <Link to="/organization-info">
+            <input
+              type="submit"
+              value="submit"
+              className="submit"
+              disabled={!this.state.isEnabled}
+            />
+          </Link>
         </form>
       </div>
     );
