@@ -3,6 +3,7 @@
   text-align: center;
   flex-direction: column;
   width: 800px;
+  margin: 0 auto;
 }
 
 .signupHeader {

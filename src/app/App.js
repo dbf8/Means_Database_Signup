@@ -5,6 +5,7 @@ import Footer from "../footer/Footer";
 import "../app/App.css";
 import OrgForm from "../orgform/OrgForm";
 import { Switch, Route } from "react-router-dom";
+import Preferences from "../preferences/Preferences"
 
 class App extends Component {
   render() {
@@ -22,6 +23,12 @@ class App extends Component {
             path="/organization-info"
             render={() => {
               return <OrgForm />;
+            }}
+          />
+          <Route
+            path="/preferences"
+            render={() => {
+              return <Preferences />;
             }}
           />
 

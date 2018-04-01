@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import OrgAddressForm from "../orgaddressform/OrgAddressForm";
 import "./OrgForm.css";
+import { Link } from "react-router-dom"
 
 class OrgForm extends Component {
   constructor() {
@@ -55,9 +56,11 @@ class OrgForm extends Component {
           />
         </form>
         <br />
-        <button type="submit" value="submit">
-          Submit
+        <Link to="/preferences">
+          <button type="submit" value="submit">
+            Submit
         </button>
+        </Link>
       </div>
     );
   }
