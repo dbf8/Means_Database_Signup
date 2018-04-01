@@ -1,0 +1,36 @@
+.signup {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 800px;
+}
+
+.signupHeader {
+  font-family: "Oswald", sans-serif;
+  height: 100%;
+}
+
+.form {
+  height: 600px;
+  width: 800px;
+  font-size: 25px;
+}
+
+.field {
+  margin-right: 30px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+.submit {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.formItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
