@@ -36,6 +36,9 @@ class OrgForm extends Component {
           />
           <br />
           <br />
+          {/* insert If(Donor value == true)
+          <label>EIN</label>
+          <input type="number" name="ein" placeholder="EIN Number" /> */}
           <OrgAddressForm
             street={this.state.street}
             suite={this.state.suite}
