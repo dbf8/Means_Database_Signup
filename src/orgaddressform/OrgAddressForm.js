@@ -5,14 +5,13 @@ class OrgAddressForm extends Component {
   render() {
     return (
       <div>
-        <label className="">Organization Address: </label>
+        <label>Organization Address: </label>
         <br />
         <br />
-        <label className="indent">Street: </label>
+        <label>Street: </label>
         <br />
         <input
           onChange={this.props.handleOnChange}
-          className="indent"
           type="text"
           name="street"
           placeholder="Street Address"
@@ -107,7 +106,6 @@ class OrgAddressForm extends Component {
           <label>Zip Code </label>
           <input
             onChange={this.props.handleOnChange}
-            className="zipwidth"
             type="number"
             name="zipcode"
             placeholder="Zip code"

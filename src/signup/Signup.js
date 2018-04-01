@@ -52,72 +52,81 @@ class Signup extends Component {
   render() {
     return (
       <div className="signup">
-        <h1>Sign Up Here!</h1>
-
+        <h1 className="signupHeader">Sign Up Here!</h1>
         <form className="form" onSubmit={this.handleSubmit}>
-          <label>
+          <div className="formItem">
+            <label>Donor</label>
             <input type="radio" />
-            Donor
-          </label>
-          <label>
+            <label>Recipient</label>
             <input type="radio" />
-            Recipient
-          </label>
+          </div>
           <br />
-          <label>
-            First Name:
-            <input
-              type="text"
-              name="firstName"
-              value={this.state.user.firstName}
-              placeholder="First Name"
-              onChange={this.handleChange}
-            />
-          </label>
+          <div className="formItem">
+            <label className="field">
+              <i className="material-icons">account_circle</i>Name:
+            </label>
+            <div>
+              <input
+                type="text"
+                name="firstName"
+                value={this.state.user.firstName}
+                placeholder="First Name"
+                onChange={this.handleChange}
+              />
+              <input
+                type="text"
+                name="lastName"
+                value={this.state.user.lastName}
+                placeholder="Last Name"
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
           <br />
-          <label>
-            Last Name:
-            <input
-              type="text"
-              name="lastName"
-              value={this.state.user.lastName}
-              placeholder="Last Name"
-              onChange={this.handleChange}
-            />
-          </label>
+          <div className="formItem">
+            <label className="field">
+              <i className="material-icons">mail_outline</i>Email:
+            </label>
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={this.state.user.email}
+                placeholder="Email"
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
           <br />
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={this.state.user.email}
-              placeholder="Email"
-              onChange={this.handleChange}
-            />
-          </label>
+          <div className="formItem">
+            <label className="field">
+              <i className="material-icons">vpn_key</i>Password:
+            </label>
+            <div>
+              <input
+                type="password"
+                name="password"
+                value={this.state.user.password}
+                placeholder="Password"
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
           <br />
-          <label>
-            Password:
-            <input
-              type="password"
-              name="password"
-              value={this.state.user.password}
-              placeholder="Password"
-              onChange={this.handleChange}
-            />
-          </label>
-          <br />
-          <label>
-            Phone Number:
-            <input
-              type="number"
-              name="phonenumber"
-              value={this.state.user.phonenumber}
-              placeholder="Phone Number"
-              onChange={this.handleChange}
-            />
-          </label>
+          <div className="formItem">
+            <label className="field">
+              <i className="material-icons">phone</i>Phone Number:
+            </label>
+            <div>
+              <input
+                type="number"
+                name="phonenumber"
+                value={this.state.user.phonenumber}
+                placeholder="Phone Number"
+                onChange={this.handleChange}
+              />
+            </div>
+          </div>
           <br />
           <input
             type="submit"
